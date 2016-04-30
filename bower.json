@@ -1,0 +1,13 @@
+{
+  "name": "js-data-table",
+  "description": "A table using JS framework",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.4.x",
+    "fontawesome": "~4.1.0"
+  }
+}
