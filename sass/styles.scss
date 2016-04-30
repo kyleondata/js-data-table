@@ -1,0 +1,45 @@
+/*body{background-color:black}*/
+@import "variables";
+@import "mixins";
+@import "overide";
+
+
+header {
+
+	background-color: black;
+	text-align: center;
+	padding: 100px 50px;
+	h1{
+		letter-spacing: 0.4em; 
+		color: $titleColor;
+		text-transform: uppercase;
+		font-weight: 300
+	}
+
+	p {
+		color: $titleDesc;
+		font-weight: 500;
+		margin-top: 20px;
+		font-size: 120%;
+		letter-spacing: 0.1em
+	}
+
+
+}
+
+
+table thead {
+
+	background-color: grey;
+
+	td {
+		padding: 20px; 
+		text-align: center; 
+		color: $titleColor; 
+		letter-spacing: 0.2em
+	}
+}
+
+table tbody td{
+	padding:10px;
+}

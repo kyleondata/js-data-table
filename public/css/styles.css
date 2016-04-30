@@ -1,0 +1,39 @@
+/*body{background-color:black}*/
+.container, .row {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.column-content {
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+
+header {
+  background-color: black;
+  text-align: center;
+  padding: 100px 50px; }
+  header h1 {
+    letter-spacing: 0.4em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300; }
+  header p {
+    color: grey;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 120%;
+    letter-spacing: 0.1em; }
+
+table thead {
+  background-color: grey; }
+  table thead td {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.2em; }
+
+table tbody td {
+  padding: 10px; }
+
+/*# sourceMappingURL=maps/styles.css.map */

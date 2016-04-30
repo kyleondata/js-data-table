@@ -9,20 +9,52 @@
 		<title>JS Data Table</title>
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
-		<!-- <link rel="stylesheet" type="text/css" href="css/test.css"> -->
+		<link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body ng-controller="dataCtrl">
 		
 		<h1 ng-controller="greetMe">{{greeting}}</h1>
 
-		<div ng-repeat="user in users" heading="{{user.name}}">
-			<ul>
-				<li class="col-lg-2">{{user.userId}}</li>
-				<li class="col-lg-2">{{user.id}}</li>
-				<li class="col-lg-4">{{user.title}}</li>
-				<li class="col-lg-4">{{user.body}}</li>
-			</ul>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 column-content">
+			<header>
+				<h1> Angular Data Table </h1>
+				<p> Below is a table data table that can be sorted in ascending and descending order for each category </p>
+			</header>
 		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 column-content">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<td class="col-lg-2">User ID 
+							<span>
+								<i class="fa fa-sort-asc" aria-hidden="true"></i>
+								<i class="fa fa-caret-down" aria-hidden="true"></i>
+							</span> 
+						</td>
+						<td class="col-lg-2"> ID <span></span></td>
+						<td class="col-lg-4"> Title <span></span></td>
+						<td class="col-lg-4"> Body <span></span></td>
+					</tr>
+				</thead>
+				<tbody ng-repeat="user in users">
+					<tr>
+						<td class="col-lg-2">{{user.userId}}</td>
+						<td class="col-lg-2">{{user.id}}</td>
+						<td class="col-lg-4">{{user.title}}</td>
+						<td class="col-lg-4">{{user.body}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
 
 
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
