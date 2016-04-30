@@ -13,14 +13,14 @@
 	</head>
 	<body ng-controller="dataCtrl">
 		
-		<!-- <h1 ng-controller="greetMe">{{greeting}}</h1> -->
+		<h1 ng-controller="greetMe">{{greeting}}</h1>
 
 		<div ng-repeat="user in users" heading="{{user.name}}">
 			<ul>
-				<li class="col-lg-2">{{user.name}}</li>
-				<li class="col-lg-2">{{user.description}}</li>
-				<li class="col-lg-4">{{user.status}}</li>
-				<li class="col-lg-4">{{user.last_updated}}</li>
+				<li class="col-lg-2">{{user.userId}}</li>
+				<li class="col-lg-2">{{user.id}}</li>
+				<li class="col-lg-4">{{user.title}}</li>
+				<li class="col-lg-4">{{user.body}}</li>
 			</ul>
 		</div>
 

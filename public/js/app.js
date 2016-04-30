@@ -5,8 +5,19 @@ app.controller('greetMe', ['$scope', function($scope) {
 }]);
 
 app.controller('dataCtrl', function ($scope, $http, $window) {
-
-	$http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
-	.success(function (response) {$scope.users = response.objects;});
-
+	$http.get("http://jsonplaceholder.typicode.com/posts")
+	.success(function (response) {
+		console.log(response);
+		$scope.users = response;
+	});
 });
+
+// var root = 'http://jsonplaceholder.typicode.com/posts';
+
+// $.ajax({
+//   url: root,
+//   method: 'GET'
+// }).then(function(data) {
+//   console.log(data);
+// });
+
