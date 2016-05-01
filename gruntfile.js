@@ -1,3 +1,5 @@
+/* Incase I want to use compass */
+
 gruntfile.jsmodule.exports = function(grunt) {
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-watch');

@@ -1,0 +1,45 @@
+
+<table class=""> <!--table table-bordered table-striped-->
+	<thead>
+		<tr>
+			<td class="col-lg-2 animated fadeIn animation-three user-id-one" ng-click="colName = 'user.userId'; reverseCol = !reverseCol">
+				<span class="label">User ID</span> 
+				<span class="column-arrows">
+					<span class="up-arrow" ng-show="colName == 'user.userId' && !reverseCol"></span>
+					<span class="down-arrow" ng-show="colName == 'user.userId' && reverseCol"></span>
+				</span> 
+			</td>
+			<td class="col-lg-2 animated fadeIn animation-four user-id-two" ng-click="colName = 'user.id'; reverseCol = !reverseCol"> 
+				<span class="label">ID</span>
+				<span class="column-arrows">
+					<span class="up-arrow" ng-show="colName == 'user.id' && !reverseCol"></span>
+					<span class="down-arrow" ng-show="colName == 'user.id' && reverseCol"></span>
+				</span>
+			</td>
+			<td class="col-lg-4 animated fadeIn animation-five user-ctitle" ng-click="colName = 'user.title'; reverseCol = !reverseCol">
+				<span class="label">Title</span>
+				<span class="column-arrows">
+					<span class="up-arrow" ng-show="colName == 'user.title' && !reverseCol"></span>
+					<span class="down-arrow" ng-show="colName == 'user.title' && reverseCol"></span>
+				</span>
+			</td>
+			<td class="col-lg-4 animated fadeIn animation-six user-cbody" ng-click="colName = 'user.body'; reverseCol = !reverseCol">
+				<span class="label">Body</span>
+				<span class="column-arrows">
+					<span class="up-arrow" ng-show="colName == 'user.body' && !reverseCol"></span>
+					<span class="down-arrow" ng-show="colName == 'user.body' && reverseCol"></span>
+				</span>
+			</td>
+		</tr>
+	</thead>
+	<tbody ng-repeat="user in users | orderBy:colName:reverseCol">
+		<tr>
+			<td class="col-lg-2 animated fadeIn animation-three user-id-one">{{user.userId}}</td>
+			<td class="col-lg-2 animated fadeIn animation-four user-id-two">{{user.id}}</td>
+			<td class="col-lg-4 animated fadeIn animation-five user-ctitle">{{user.title}}</td>
+			<td class="col-lg-4 animated fadeIn animation-six user-cbody">{{user.body}}</td>
+		</tr>
+	</tbody>
+</table>
+
+

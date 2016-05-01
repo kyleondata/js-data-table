@@ -5,11 +5,20 @@ app.controller('greetMe', ['$scope', function($scope) {
 }]);
 
 app.controller('dataCtrl', function ($scope, $http, $window) {
+
 	$http.get("http://jsonplaceholder.typicode.com/posts")
 	.success(function (response) {
 		$scope.users = response;
 	});
+
+ 
+  // $scope.colName = ['user.userId', 'user.id'];
+  $scope.colName = 'user.userId';
+  $scope.reverseCol  = false;
+
 });
+
+
 
 
 

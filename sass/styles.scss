@@ -40,6 +40,10 @@ table thead {
 
 table tbody td{
 	padding:10px;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 10px !important;  
+
 
 	@include respond-to(wide-screens){
 	 	&:hover {
@@ -49,6 +53,33 @@ table tbody td{
    	}
 }
 
+
+.icons {
+	position: absolute; 
+	top: 5px; 
+	left: 0;
+
+	ul li{
+		float: left; 
+		display:inline;
+	}
+}
+
+.column-arrows{
+	color: white; 
+	width:50px;
+	font-family: FontAwesome;
+
+	.up-arrow:before {
+	content:"\f0d8";
+	width: 20px;
+	}
+
+	.down-arrow:before{
+		content: "\f0dd";
+		width: 20px;
+	}
+}
 
 /* Animation-delay for each section on load. Helps a little bit with slow json load */
 
@@ -71,32 +102,43 @@ table tbody td{
     $columnColor: nth($property, 1);
     $icon: nth($property, 2);
  
+ 	/* Table Column color and layout */
     .user-#{$name}{
       	font-family: FontAwesome;
       	padding: 5px; 
 		margin:10px 33px 35px 33px;
 		display: inline-block;
-	
-		/*&tbody:hover{transition: all .2s ease-in-out;
-      				transform: scale(1.3);
-      				z-index: 10 
-      	}*/
-		
+
 		thead & {
 			cursor: pointer;
 			background-color: $columnColor;
 		}
 
       	tbody & {
-      		background-color: rgba($columnColor, 0.3 ) !important
+      		background-color: lighten($columnColor, 30% ) !important
 
       	}
 
-      	:before{
+      	.label:before{
       		content: $icon; 
       		padding: 2px
       	}
       	
     }
+	
+	/* Icon content and color in the top left header */
+	.icons ul .#{$name}:before{
+		font-family: FontAwesome;
+		content: $icon;
+		display: inline-block;
+		color: grey;
+		width: 30px;
+		margin: 10px; 
+		font-size: 17px;	
+		cursor: pointer;
+		color: rgba($columnColor, 0.8); 
+
+	}
 }
+
 
