@@ -13,14 +13,17 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 <body ng-controller="dataCtrl">
-		
-	<div class="container">	
-		<div class="row">	
-			<div class="col-lg-12 col-md-12 column-content" style="z-index:15">
+	
+	<div class="icon-toolbar" ng-include="'views/icon_toolbar.html'"></div>
+
+	<div class="container body-container">	
+		<div class="row">
+
+			<div class="col-lg-12 col-md-12 column-content">
 				<!-- Header -->
 				<div ng-include="'views/header.html'"></div>
 				<!-- Data Table -->
-				<div ng-include ="'views/data_table.html'" style="z-index:5"></div>	
+				<div ng-include ="'views/data_table.html'"></div>	
 			</div>
 		</div>		
 	</div>

@@ -11,10 +11,11 @@ To set up this code in your development environment run these commands:
 
 * `git clone https://github.com/arc6789/js-data-table`
 * `npm install`
+* `npm install -g json-server`
 * `node server.js`
  
 
-To further develop with this code run:
+To further develop and design with this code run:
 
 * `gulp sass-and-watch`
 

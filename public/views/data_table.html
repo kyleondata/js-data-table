@@ -32,10 +32,10 @@
 			</td>
 		</tr>
 	</thead>
-	<tbody ng-repeat="user in users | orderBy:colName:reverseCol">
+	<tbody class="table table-bordered table-striped" ng-repeat="user in users | orderBy:colName:reverseCol">
 		<tr>
-			<td class="col-lg-2 animated fadeIn animation-three user-id-one">{{user.userId}}</td>
-			<td class="col-lg-2 animated fadeIn animation-four user-id-two">{{user.id}}</td>
+			<td class="col-lg-2 animated fadeIn animation-three user-id-one text-center">{{user.userId}}</td>
+			<td class="col-lg-2 animated fadeIn animation-four user-id-two text-center">{{user.id}}</td>
 			<td class="col-lg-4 animated fadeIn animation-five user-ctitle">{{user.title}}</td>
 			<td class="col-lg-4 animated fadeIn animation-six user-cbody">{{user.body}}</td>
 		</tr>
