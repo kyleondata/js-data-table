@@ -15,7 +15,8 @@
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
-    "hbs": "^4.0.0"
+    "hbs": "^4.0.0",
+    "json-server": "^0.8.10"
   },
   "devDependencies": {
     "body-parser": "^1.15.0",
