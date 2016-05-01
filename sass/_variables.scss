@@ -1,3 +1,13 @@
-
+$headerBgColor: #191919;
 $titleColor: white;
 $titleDesc: grey;
+$tableHeaderBgColor: grey;
+$animate-this: one two three four five six;
+
+$cols: rgb(255, 140, 0) rgb(91, 190, 251) rgb(165, 42, 42) rgb(60, 179, 113);
+$column-tag: (
+	id-one: (nth($cols,1), "\f007"),
+	id-two: (nth($cols, 2), "\f073"),
+	ctitle: (nth($cols, 3), "\f030"),
+	cbody:  (nth($cols, 4), "\f086")
+);

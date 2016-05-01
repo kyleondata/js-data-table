@@ -7,10 +7,16 @@ app.controller('greetMe', ['$scope', function($scope) {
 app.controller('dataCtrl', function ($scope, $http, $window) {
 	$http.get("http://jsonplaceholder.typicode.com/posts")
 	.success(function (response) {
-		console.log(response);
 		$scope.users = response;
 	});
+
+
+
+
 });
+
+// console.log($scope.users.userId);
+
 
 
 

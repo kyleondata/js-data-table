@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*body{background-color:black}*/
 .container, .row {
   width: 100%;
@@ -10,7 +11,7 @@
   width: 100%; }
 
 header {
-  background-color: black;
+  background-color: #191919;
   text-align: center;
   padding: 100px 50px; }
   header h1 {
@@ -25,15 +26,127 @@ header {
     font-size: 120%;
     letter-spacing: 0.1em; }
 
-table thead {
-  background-color: grey; }
-  table thead td {
-    padding: 20px;
-    text-align: center;
-    color: white;
-    letter-spacing: 0.2em; }
+table thead td {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.2em;
+  word-wrap: break-word; }
 
 table tbody td {
   padding: 10px; }
+  table tbody td:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.3); }
+
+/* Animation-delay for each section on load. Helps a little bit with slow json load */
+.animation-one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.animation-two {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.animation-three {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.animation-four {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.animation-five {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.animation-six {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+/* Colors for each column and icons for each column header*/
+.user-id-one {
+  font-family: FontAwesome;
+  padding: 5px;
+  margin: 10px 33px 35px 33px;
+  display: inline-block;
+  /*&tbody:hover{transition: all .2s ease-in-out;
+      				transform: scale(1.3);
+      				z-index: 10 
+      	}*/ }
+  thead .user-id-one {
+    cursor: pointer;
+    background-color: darkorange; }
+  tbody .user-id-one {
+    background-color: rgba(255, 140, 0, 0.3) !important; }
+  .user-id-one :before {
+    content: "";
+    padding: 2px; }
+
+.user-id-two {
+  font-family: FontAwesome;
+  padding: 5px;
+  margin: 10px 33px 35px 33px;
+  display: inline-block;
+  /*&tbody:hover{transition: all .2s ease-in-out;
+      				transform: scale(1.3);
+      				z-index: 10 
+      	}*/ }
+  thead .user-id-two {
+    cursor: pointer;
+    background-color: #5bbefb; }
+  tbody .user-id-two {
+    background-color: rgba(91, 190, 251, 0.3) !important; }
+  .user-id-two :before {
+    content: "";
+    padding: 2px; }
+
+.user-ctitle {
+  font-family: FontAwesome;
+  padding: 5px;
+  margin: 10px 33px 35px 33px;
+  display: inline-block;
+  /*&tbody:hover{transition: all .2s ease-in-out;
+      				transform: scale(1.3);
+      				z-index: 10 
+      	}*/ }
+  thead .user-ctitle {
+    cursor: pointer;
+    background-color: brown; }
+  tbody .user-ctitle {
+    background-color: rgba(165, 42, 42, 0.3) !important; }
+  .user-ctitle :before {
+    content: "";
+    padding: 2px; }
+
+.user-cbody {
+  font-family: FontAwesome;
+  padding: 5px;
+  margin: 10px 33px 35px 33px;
+  display: inline-block;
+  /*&tbody:hover{transition: all .2s ease-in-out;
+      				transform: scale(1.3);
+      				z-index: 10 
+      	}*/ }
+  thead .user-cbody {
+    cursor: pointer;
+    background-color: mediumseagreen; }
+  tbody .user-cbody {
+    background-color: rgba(60, 179, 113, 0.3) !important; }
+  .user-cbody :before {
+    content: "";
+    padding: 2px; }
 
 /*# sourceMappingURL=maps/styles.css.map */
