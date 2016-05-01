@@ -12,59 +12,51 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
-	<body ng-controller="dataCtrl">
+<body ng-controller="dataCtrl">
 		
-
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 column-content">
-			<header>
-				<h1 class="animated fadeInDown animation-one"> Angular Data Table </h1>
-				<p  class="animated fadeInDown animation-two" > Below is a table data table that can be sorted in ascending and descending order for each category </p>
-			</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 column-content">
+				<header>
+					<h1 class="animated fadeInDown animation-one"> Angular Data Table </h1>
+					<p  class="animated fadeInDown animation-two" > Below is a table data table that can be sorted in ascending and descending order for each category </p>
+				</header>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 column-content">
+				<table class=""> <!--table table-bordered table-striped-->
+					<thead>
+						<tr>
+							<td class="col-lg-2 animated fadeIn animation-three user-id-one">User ID 
+								<span ng-click="sortType = 'name'; sortReverse = !sortReverse">
+									<i class="fa fa-sort-asc" ng-show="sortType == 'user.userId' && !sortReverse" aria-hidden="true"></i>
+									<i class="fa fa-caret-down" ng-show="sortType == 'name' && sortReverse" aria-hidden="true"></i>
+								</span> 
+							</td>
+							<td class="col-lg-2 animated fadeIn animation-four user-id-two"> ID <span></span></td>
+							<td class="col-lg-4 animated fadeIn animation-five user-ctitle"> Title <span></span></td>
+							<td class="col-lg-4 animated fadeIn animation-six user-cbody"> Body <span></span></td>
+						</tr>
+					</thead>
+					<tbody ng-repeat="user in users | orderBy:sortType:sortReverse">
+						<tr>
+							<td class="col-lg-2 animated fadeIn animation-three user-id-one">{{user.userId}}</td>
+							<td class="col-lg-2 animated fadeIn animation-four user-id-two">{{user.id}}</td>
+							<td class="col-lg-4 animated fadeIn animation-five user-ctitle">{{user.title}}</td>
+							<td class="col-lg-4 animated fadeIn animation-six user-cbody">{{user.body}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 column-content">
-			<table class=""> <!--table table-bordered table-striped-->
-				<thead>
-					<tr>
-						<td class="col-lg-2 animated fadeIn animation-three user-id-one">User ID 
-							<span ng-click="sortType = 'name'; sortReverse = !sortReverse">
-								<i class="fa fa-sort-asc" ng-show="sortType == 'user.userId' && !sortReverse" aria-hidden="true"></i>
-								<i class="fa fa-caret-down" ng-show="sortType == 'name' && sortReverse" aria-hidden="true"></i>
-							</span> 
-						</td>
-						<td class="col-lg-2 animated fadeIn animation-four user-id-two"> ID <span></span></td>
-						<td class="col-lg-4 animated fadeIn animation-five user-ctitle"> Title <span></span></td>
-						<td class="col-lg-4 animated fadeIn animation-six user-cbody"> Body <span></span></td>
-					</tr>
-				</thead>
-				<tbody ng-repeat="user in users | orderBy:sortType:sortReverse">
-					<tr>
-						<td class="col-lg-2 animated fadeIn animation-three user-id-one">{{user.userId}}</td>
-						<td class="col-lg-2 animated fadeIn animation-four user-id-two">{{user.id}}</td>
-						<td class="col-lg-4 animated fadeIn animation-five user-ctitle">{{user.title}}</td>
-						<td class="col-lg-4 animated fadeIn animation-six user-cbody">{{user.body}}</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
 
-
-
-
-		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-  		<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 	<!-- 	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
 		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
-	<!-- 	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> -->
-	  
-		
+	<!-- 	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> -->	
 	</body>
 </html>

@@ -9,11 +9,9 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
 	.success(function (response) {
 		$scope.users = response;
 	});
-
-
-
-
 });
+
+
 
 // console.log($scope.users.userId);
 
