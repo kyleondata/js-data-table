@@ -1,3 +1,6 @@
+
+/* Controller retreives sorts json data */
+
 app.controller('dataCtrl', function ($scope, $http, $window) {
 
   $http.get("http://jsonplaceholder.typicode.com/posts")
@@ -5,20 +8,13 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
     $scope.users = response;
   });
 
- 
-  // $scope.colName = ['user.userId', 'user.id'];
-  $scope.colName = 'user.userId';
+  $scope.colName = 'userId';
   $scope.reverseCol  = false;
 
 });
 
-// console.log($scope.users.userId);
-
-
-
-
+// Testing
 // var root = 'http://jsonplaceholder.typicode.com/posts';
-
 // $.ajax({
 //   url: root,
 //   method: 'GET'

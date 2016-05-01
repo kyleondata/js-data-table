@@ -1,7 +1,7 @@
-<div class="icons" ng-controller="iconToolbar">
+<div class="icons">
 	<span class="down-arrow toolbar-arrow" ng-click="toolDrop()" style="color:grey"></span>
 	<ul style="float:right">
-		<li class="id-one"></li>
+		<li class="id-one" ng-model="why"></li>
 		<li class="id-two"></li>
 		<li class="ctitle"></li>
 		<li class="cbody"></li>
@@ -9,8 +9,8 @@
 </div>
 <div class="drop-down">
 	<b>Click on the icons above to get more information</b>
-	<div class=""></div>
-	<div class=""></div>
-	<div class=""></div>
-	<div class=""></div>		
+	<div class="" ng-show="why">hiiii</div>
+	<div class="" ng-hide="why">no</div>
+	<div class="">no</div>
+	<div class="">no</div>		
 </div>
