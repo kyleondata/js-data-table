@@ -1,14 +1,12 @@
 <!-- Top Left Section for icons -->
-<div class="icons">
-	
+<div class="icons">	
 	<div class="mobile-buttons" ng-click="toolDrop()">
     	<a class="next pantwo">
          	<span></span>
           	<span></span>
           	<span></span>
     	</a>
-  	</div>
-	
+  	</div>	
 	<ul>
 		<li class="id-one" ng-click="show('userId')"></li>
 		<li class="id-two" ng-click="show('id')"></li>
@@ -20,25 +18,22 @@
 <!-- Drop Down Box for Additional Information -->
 <div class="drop-down">
 	<b>Click on the icons above to get more information</b>
-	<hr>
-	
-	<div ng-repeat="user in users" ng-show="divShow == 'userId'">
-		<p>{{user.userId}}</p>
-		<hr>
-	</div>
-	<div ng-repeat="user in users" ng-show="divShow == 'id'">
-		<p>{{user.id}}</p>
-		<hr>
-	</div>
-	<div ng-repeat="user in users" ng-show="divShow == 'title'">
-		<p>{{user.title}}</p>
-		<hr>
-	</div>
-	<div ng-repeat="user in users" ng-show="divShow == 'body'">
-		<p>{{user.body}}</p>
-		<hr>
-	</div>
 
+	<my-panel title="User Id" ng-show="divShow == 'userId'">
+		<p ng-repeat="user in users">{{user.userId}}</p>
+	</my-panel>
+
+	<my-panel title="Id" ng-show="divShow == 'id'">
+		<p ng-repeat="user in users">{{user.id}}</p>
+	</my-panel>
+
+	<my-panel title="Title" ng-show="divShow == 'title'">
+		<p ng-repeat="user in users">{{user.title}}</p>
+	</my-panel>
+
+	<my-panel title="Body" ng-show="divShow == 'body'">
+		<p ng-repeat="user in users">{{user.body}}</p>
+	</my-panel>
 
 </div>
 

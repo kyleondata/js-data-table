@@ -285,19 +285,16 @@ table tbody td {
   top: 15px; }
 
 .next span:nth-of-type(2) {
-  /*{-ms-transform: rotate(40deg); 
-    -webkit-transform: rotate(-40deg); */
-  /* transform: rotate(-40deg);*/
   top: 20px; }
 
 .next span:nth-of-type(3) {
-  /*-ms-transform: rotate(40deg); 
-    -webkit-transform: rotate(-40deg); */
-  /* transform: rotate(-40deg);*/
   top: 25px; }
 
 .open {
   display: block;
   font-size: 11px; }
+
+.panel-section, my-panel p {
+  border-top: 1px solid #eee; }
 
 /*# sourceMappingURL=maps/styles.css.map */

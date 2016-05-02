@@ -17,7 +17,15 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
 
 });
 
-
+app.directive("myPanel", function() {
+  return {
+    transclude: true,
+      scope: {
+      title: '@',
+      },
+    templateUrl: "../../views/my-panel.html"
+  };
+});
 
 
 // Testing
