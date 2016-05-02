@@ -58,6 +58,7 @@ table tbody td {
   border: 1px solid white !important;
   padding: 20px !important;
   zoom: 1;
+  -webkit-transform: scale(1);
   transform: scale(1);
   transition: zoom 1.5s ease;
   height: 100%;
@@ -66,6 +67,7 @@ table tbody td {
     table tbody td:hover {
       transition: all .4s ease-in-out;
       zoom: 1.1;
+      -webkit-transform: scale(1.1) translateZ(0);
       transform: scale(1.1) translateZ(0);
       z-index: 20;
       position: relative;
@@ -91,25 +93,21 @@ table tbody td {
 /* Animation-delay for each section on load. Helps a little bit with slow json load */
 .animation-one {
   -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
   animation-delay: 0.5s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .animation-two {
   -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
   animation-delay: 1s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .animation-three {
   -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
   animation-delay: 1.5s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
 .animation-four {
   -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
   animation-delay: 2s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
@@ -135,7 +133,6 @@ table tbody td {
   font-family: FontAwesome;
   content: "";
   display: inline-block;
-  color: grey;
   width: 30px;
   margin: 10px;
   font-size: 14px;
@@ -163,7 +160,6 @@ table tbody td {
   font-family: FontAwesome;
   content: "";
   display: inline-block;
-  color: grey;
   width: 30px;
   margin: 10px;
   font-size: 14px;
@@ -191,7 +187,6 @@ table tbody td {
   font-family: FontAwesome;
   content: "";
   display: inline-block;
-  color: grey;
   width: 30px;
   margin: 10px;
   font-size: 14px;
@@ -219,14 +214,13 @@ table tbody td {
   font-family: FontAwesome;
   content: "";
   display: inline-block;
-  color: grey;
   width: 30px;
   margin: 10px;
   font-size: 14px;
   cursor: pointer;
   color: rgba(60, 179, 113, 0.8); }
 
-.body-coontainer {
+.body-container {
   z-index: 1; }
 
 .drop-down {
@@ -296,5 +290,3 @@ table tbody td {
 
 .panel-section, my-panel p {
   border-top: 1px solid #eee; }
-
-/*# sourceMappingURL=maps/styles.css.map */

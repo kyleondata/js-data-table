@@ -1,1 +1,1 @@
-app.controller("dataCtrl",function(a,e,o){e.get("http://jsonplaceholder.typicode.com/posts").success(function(e){a.users=e}),a.dollars="whaaaaaa",a.colName="userId",a.reverseCol=!1});
+app.controller("dataCtrl",function(e,t,o){t.get("http://jsonplaceholder.typicode.com/posts").success(function(t){e.users=t}),e.colName="userId",e.reverseCol=!1,e.show=function(t){e.divShow=t}}),app.directive("myPanel",function(){return{transclude:!0,scope:{title:"@"},templateUrl:"../../views/my-panel.html"}});
