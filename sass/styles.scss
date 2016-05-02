@@ -12,13 +12,16 @@ header {
 	background-color: $headerBgColor;
 	text-align: center;
 	padding: 80px 50px;
+	@include respond-to(handhelds){
+		padding: 50px; 
+	}
 	h1{
 		letter-spacing: 0.4em; 
 		color: $titleColor;
 		text-transform: uppercase;
 		font-weight: 300;
 		@include respond-to(handhelds){
-			font-size:20px;
+			font-size:22px;
 			font-weight: 400;
 		}
 	}
@@ -30,7 +33,7 @@ header {
 		font-size: 120%;
 		letter-spacing: 0.1em;
 		@include respond-to(handhelds){
-			font-size:13px;
+			font-size:14px;
 		}
 	}
 

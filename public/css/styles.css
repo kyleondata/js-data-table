@@ -23,6 +23,9 @@ header {
   background-color: #191919;
   text-align: center;
   padding: 80px 50px; }
+  @media only screen and (max-width: 450px) {
+    header {
+      padding: 50px; } }
   header h1 {
     letter-spacing: 0.4em;
     color: white;
@@ -30,7 +33,7 @@ header {
     font-weight: 300; }
     @media only screen and (max-width: 450px) {
       header h1 {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 400; } }
   header p {
     color: grey;
@@ -40,7 +43,7 @@ header {
     letter-spacing: 0.1em; }
     @media only screen and (max-width: 450px) {
       header p {
-        font-size: 13px; } }
+        font-size: 14px; } }
 
 table thead td {
   padding: 20px;
