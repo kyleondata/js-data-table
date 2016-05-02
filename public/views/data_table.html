@@ -1,5 +1,5 @@
 
-<table class=""> <!--table table-bordered table-striped-->
+<table class="">
 	<thead class="mobilewrapper animated fadeIn animation-three">
 		<tr>
 			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-one" ng-click="colName = 'userId'; reverseCol = !reverseCol">
@@ -31,11 +31,7 @@
 				</span>
 			</td>
 		</tr>
-	</thead>
-	
-	<!-- <p>{{ colName }}</p>
-    <p>{{reverseCol}}</p> -->
-       
+	</thead>       
 	<tbody class="table animated fadeIn animation-four table-bordered mobilewrapper">
 		<tr ng-repeat="user in users | orderBy:colName:reverseCol">
 			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-one text-center">{{user.userId}}</td>

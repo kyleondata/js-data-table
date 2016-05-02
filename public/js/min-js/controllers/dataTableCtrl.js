@@ -1,0 +1,1 @@
+app.controller("dataCtrl",function(a,e,o){e.get("http://jsonplaceholder.typicode.com/posts").success(function(e){a.users=e}),a.dollars="whaaaaaa",a.colName="userId",a.reverseCol=!1});

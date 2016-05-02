@@ -38,13 +38,12 @@ gulp.task('browser-autoprefix', function () {
     .pipe(gulp.dest('public/css/'));
 });
 
- 
 
 /* To minify the output of javascript files for faster page load.
 Switch file path in production environment */
  
 gulp.task('compress', function() {
-  return gulp.src(['public/js/*.js'])
+  return gulp.src(['public/js/**/*.js'])
     .pipe(uglify())
     .pipe(gulp.dest('public/js/min-js/'));
 });

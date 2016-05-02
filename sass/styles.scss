@@ -1,4 +1,4 @@
-/*body{background-color:black}*/
+
 @import "variables";
 @import "mixins";
 @import "overide";
@@ -16,13 +16,16 @@ header {
 		padding: 50px; 
 	}
 	h1{
-		letter-spacing: 0.4em; 
+		letter-spacing: 0.7em; 
 		color: $titleColor;
 		text-transform: uppercase;
 		font-weight: 300;
+		padding-bottom: 10px;
+
 		@include respond-to(handhelds){
 			font-size:22px;
-			font-weight: 400;
+			font-weight: 500;
+		
 		}
 	}
 
@@ -32,6 +35,7 @@ header {
 		margin-top: 20px;
 		font-size: 120%;
 		letter-spacing: 0.1em;
+	
 		@include respond-to(handhelds){
 			font-size:14px;
 		}
@@ -54,48 +58,25 @@ table thead {
 table tbody td{
 	font-size: 15px;
 	font-weight: 700;
-	border: 1px solid white;
+	border: 1px solid white !important;
 	padding: 20px !important; 
 	zoom: 1;
 	transform: scale(1);
     transition: zoom 1.5s ease; 
     height: 100%;
-/*    z-index: -1;
-*/	position:relative;
+	position:relative;
 
 	@include respond-to(wide-screens){
 	 	&:hover {
 		transition: all .4s ease-in-out;
       	zoom: 1.1;
-      	transform: scale(1.1);
+      	transform: scale(1.1) translateZ(0);
       	z-index: 20;
       	position: relative;
       	height: 100%
    		}
    	}
 }
-
-/*.user-ctitle{
-	zoom: 1;
-	transform: scale(1);
-    transition: zoom 1.5s ease; 
-    z-index: -1;
-	position:relative;
-
-&:hover{
-	transition: all .4s ease-in-out;
-      	zoom: 1.1;
-      	transform: scale(1.1);
-      	z-index: 20;
-      	position: relative
-
-}
-}*/
-
-
-
-
-
 
 .column-arrows{
 	color: white; 
@@ -105,19 +86,20 @@ table tbody td{
 	.up-arrow:before {
 	content:"\f0d8";
 	width: 20px;
-	}
-
-	
+	}	
 }
 
 .down-arrow:before{
-		content: "\f0dd";
-		font-family: FontAwesome;
+	content: "\f0dd";
+	font-family: FontAwesome;
 
-		
-	}
+}
 
-	.toolbar-arrow{font-size: 25px; padding: 5px; margin-left:10px }
+.toolbar-arrow{
+	font-size: 25px; 
+	padding: 5px; 
+	margin-left:10px 
+}
 
 /* Animation-delay for each section on load. Helps a little bit with slow json load */
 
@@ -193,7 +175,7 @@ table tbody td{
 	border-top:2px solid grey; 
 	display: none;
 	width: inherit;
-	padding:5px;
+	padding:20px;
 	font-size: 12px;
 	overflow: auto !important;
 	
@@ -201,7 +183,7 @@ table tbody td{
 
 .icon-toolbar {
 	z-index: 100;
-	position: absolute; 
+	position: fixed; 
 	top: 0px; 
 	left: 0;
 	width: 350px;
@@ -220,16 +202,18 @@ table tbody td{
 		display:inline;
 	}
 
-	.icons ul {margin-bottom:0 !important;}
+	.icons ul {
+		margin-bottom:0 !important;
+		float:right
+	}
 
 }
 
 .icons{    
 	height: 40px;
     background: rgba(255,255,255, 0.9);
+
 }
-
-
 
 .mobile-buttons {
 	cursor:pointer;
@@ -239,15 +223,14 @@ table tbody td{
 	padding: 5px;
 	left: 20px;
 	position:absolute;
+
 	a span{
 	  display:inline-block;
-	
 	  width: 17px; 
 	  background-color:grey; 
 	  height:2px; 
 	  position:absolute;
 	  margin: 1px auto 0 auto;
-	  /*left: 5px*/
 	  text-align: center
   	}	
  
@@ -271,9 +254,8 @@ table tbody td{
 
 }
 
-
-
 .open {
 	display: block;
 	font-size: 11px
 }
+

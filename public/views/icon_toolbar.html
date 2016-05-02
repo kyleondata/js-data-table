@@ -2,38 +2,43 @@
 <div class="icons">
 	
 	<div class="mobile-buttons" ng-click="toolDrop()">
-    	<a class="next pantwo" href="#paneltwo" data-transition="flip">
+    	<a class="next pantwo">
          	<span></span>
           	<span></span>
           	<span></span>
     	</a>
   	</div>
 	
-	<ul style="float:right">
-		<li class="id-one" ng-model="why" ng-click="showuserid=true"></li>
-		<li class="id-two"></li>
-		<li class="ctitle"></li>
-		<li class="cbody"></li>
+	<ul>
+		<li class="id-one" ng-click="show('userId')"></li>
+		<li class="id-two" ng-click="show('id')"></li>
+		<li class="ctitle" ng-click="show('title')"></li>
+		<li class="cbody" ng-click="show('body')"></li>
 	</ul>		
 </div>
 
 <!-- Drop Down Box for Additional Information -->
 <div class="drop-down">
 	<b>Click on the icons above to get more information</b>
-	<div class="" ng-show="why">hiiii</div>
-	<div class="" ng-hide="why">no</div>
-	<div class="">{{dollars}}</div>
+	<hr>
 	
-	<div ng-repeat="user in users" ng-show="showuserid">
+	<div ng-repeat="user in users" ng-show="divShow == 'userId'">
+		<p>{{user.userId}}</p>
+		<hr>
+	</div>
+	<div ng-repeat="user in users" ng-show="divShow == 'id'">
 		<p>{{user.id}}</p>
 		<hr>
 	</div>
-
-	<div ng-controller="Controller">
-	  	<my-customer info="naomi"></my-customer>
-	 	<hr>
-	  	<my-customer info="igor"></my-customer>
+	<div ng-repeat="user in users" ng-show="divShow == 'title'">
+		<p>{{user.title}}</p>
+		<hr>
 	</div>
-			
+	<div ng-repeat="user in users" ng-show="divShow == 'body'">
+		<p>{{user.body}}</p>
+		<hr>
+	</div>
+
+
 </div>
 

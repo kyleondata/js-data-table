@@ -1,0 +1,1 @@
+app.controller("iconToolbar",["$scope",function(o){o.toolDrop=function(){$(".drop-down").toggleClass("open")}}]);

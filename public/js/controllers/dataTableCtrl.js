@@ -6,18 +6,14 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
   $http.get("http://jsonplaceholder.typicode.com/posts")
   .success(function (response) {
     $scope.users = response;
-
   });
 
-  // $scope.category = {
-
-  // }
-
-  $scope.dollars= "whaaaaaa";
   $scope.colName = 'userId';
   $scope.reverseCol  = false;
 
-
+  $scope.show = function(arg) {
+    $scope.divShow = arg;
+  }
 
 });
 

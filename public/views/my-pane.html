@@ -1,4 +1,5 @@
 <div class="tab-pane" ng-show="selected">
   <h4>{{title}}</h4>
+  <p ng-repeat="user in users">{{user.userId}}</p>
   <div ng-transclude></div>
 </div>
