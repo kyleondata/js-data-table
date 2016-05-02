@@ -1,5 +1,7 @@
 # Angular Data Table
 
+http://quiet-earth-48469.herokuapp.com/
+
 This project contains data table that can be sorted in ascending and descending order by each category.
 
 

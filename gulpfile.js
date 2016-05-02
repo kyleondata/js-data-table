@@ -6,12 +6,8 @@ var minifyCss = require('gulp-minify-css');
 var sassbeautify = require('gulp-sassbeautify');
 var cssbeautify = require('gulp-cssbeautify');
 var sourcemaps = require('gulp-sourcemaps');
-
-
 var compass = require('gulp-compass'),
   path = require('path');
-
-
 
 'use strict';
 
@@ -43,28 +39,24 @@ gulp.task('browser-autoprefix', function () {
 });
 
  
-// gulp.task('css', function () {
-//   return gulp.src('sass/**/*.scss')
-//     .pipe(cssbeautify())
-//     .pipe(gulp.dest('sass/'))
-// });
 
-
-/* To minify the output of javascript files for faster page load*/
+/* To minify the output of javascript files for faster page load.
+Switch file path in production environment */
  
 gulp.task('compress', function() {
-  return gulp.src(['js/*.js'])
+  return gulp.src(['public/js/*.js'])
     .pipe(uglify())
-    .pipe(gulp.dest('min-js/'));
+    .pipe(gulp.dest('public/js/min-js/'));
 });
 
 
-/* To minify the output of css files for faster page load*/ 
+/* To minify the output of css files for faster page load. 
+Switch file path in production environment*/ 
 
 gulp.task('min-css', function() {
-  return gulp.src('css/*.css')
+  return gulp.src('public/css/*.css')
     .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('min-css/'));
+    .pipe(gulp.dest('public/css/min-css/'));
 });
 
 
@@ -77,7 +69,7 @@ gulp.task('minify-css',['min-css']);
 gulp.task('css-pretty',['css']);
 gulp.task('vendor-fixin',['browser-autoprefix']);
 
-/* For the Forgetfull */
+/* For the Forgetful. To Finish this list */
 gulp.task('gulp-commands', function(){
   var obj = {
     sass: "sass-and-watch",

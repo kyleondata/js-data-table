@@ -13,9 +13,12 @@
 .label {
   font-size: 15px !important; }
 
-html {
-  min-width: 460px; }
+.table-container {
+  overflow-x: auto; }
 
+/*html{
+	min-width: 460px
+}*/
 header {
   background-color: #191919;
   text-align: center;

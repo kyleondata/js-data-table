@@ -2,28 +2,28 @@
 <table class=""> <!--table table-bordered table-striped-->
 	<thead class="mobilewrapper animated fadeIn animation-three">
 		<tr>
-			<td class="col-lg-2 animated fadeIn user-id-one" ng-click="colName = 'userId'; reverseCol = !reverseCol">
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-one" ng-click="colName = 'userId'; reverseCol = !reverseCol">
 				<span class="label">User ID</span> 
 				<span class="column-arrows">
 					<span class="up-arrow" ng-show="colName == 'userId' && !reverseCol"></span>
 					<span class="down-arrow" ng-show="colName == 'userId' && reverseCol"></span>
 				</span> 
 			</td>
-			<td class="col-lg-2 animated fadeIn user-id-two" ng-click="colName = 'id'; reverseCol = !reverseCol"> 
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-two" ng-click="colName = 'id'; reverseCol = !reverseCol"> 
 				<span class="label">ID</span>
 				<span class="column-arrows">
 					<span class="up-arrow" ng-show="colName == 'id' && !reverseCol"></span>
 					<span class="down-arrow" ng-show="colName == 'id' && reverseCol"></span>
 				</span>
 			</td>
-			<td class="col-lg-4 animated fadeIn user-ctitle" ng-click="colName = 'title'; reverseCol = !reverseCol">
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 animated fadeIn user-ctitle" ng-click="colName = 'title'; reverseCol = !reverseCol">
 				<span class="label">Title</span>
 				<span class="column-arrows">
 					<span class="up-arrow" ng-show="colName == 'title' && !reverseCol"></span>
 					<span class="down-arrow" ng-show="colName == 'title' && reverseCol"></span>
 				</span>
 			</td>
-			<td class="col-lg-4 animated fadeIn user-cbody" ng-click="colName = 'body'; reverseCol = !reverseCol">
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 animated fadeIn user-cbody" ng-click="colName = 'body'; reverseCol = !reverseCol">
 				<span class="label">Body</span>
 				<span class="column-arrows">
 					<span class="up-arrow" ng-show="colName == 'body' && !reverseCol"></span>
@@ -38,10 +38,10 @@
        
 	<tbody class="table animated fadeIn animation-four table-bordered mobilewrapper">
 		<tr ng-repeat="user in users | orderBy:colName:reverseCol">
-			<td class="col-lg-2 animated fadeIn user-id-one text-center">{{user.userId}}</td>
-			<td class="col-lg-2 animated fadeIn user-id-two text-center">{{user.id}}</td>
-			<td class="col-lg-4 animated fadeIn user-ctitle">{{user.title}}</td>
-			<td class="col-lg-4 animated fadeIn user-cbody">{{user.body}}</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-one text-center">{{user.userId}}</td>
+			<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 animated fadeIn user-id-two text-center">{{user.id}}</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 animated fadeIn user-ctitle">{{user.title}}</td>
+			<td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 animated fadeIn user-cbody">{{user.body}}</td>
 		</tr>
 	</tbody>
 </table>
