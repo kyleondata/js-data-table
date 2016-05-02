@@ -13,10 +13,11 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body ng-controller="dataCtrl">
+		<!-- Icon Toolbar Top Left -->
 		<div class="icon-toolbar" ng-controller="iconToolbar" ng-include="'views/icon_toolbar.html'"></div>
 		<div class="container body-container">	
 			<div class="row">
-				<div class="col-lg-12 col-md-12 column-content">
+				<div class="col-lg-12 col-md-12 col-sm-12 column-content">
 					<!-- Header -->
 					<div ng-include="'views/header.html'"></div>
 					<!-- Data Table -->
@@ -24,15 +25,10 @@
 				</div>
 			</div>		
 		</div>
-
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/controllers/dataTableCtrl.js"></script>
 		<script type="text/javascript" src="js/controllers/iconToolbarCtrl.js"></script>
- 		
-		<!--<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
-		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
-		<!--<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> -->	
 	</body>
 </html>

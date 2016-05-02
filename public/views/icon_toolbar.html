@@ -1,16 +1,39 @@
+<!-- Top Left Section for icons -->
 <div class="icons">
-	<span class="down-arrow toolbar-arrow" ng-click="toolDrop()" style="color:grey"></span>
+	
+	<div class="mobile-buttons" ng-click="toolDrop()">
+    	<a class="next pantwo" href="#paneltwo" data-transition="flip">
+         	<span></span>
+          	<span></span>
+          	<span></span>
+    	</a>
+  	</div>
+	
 	<ul style="float:right">
-		<li class="id-one" ng-model="why"></li>
+		<li class="id-one" ng-model="why" ng-click="showuserid=true"></li>
 		<li class="id-two"></li>
 		<li class="ctitle"></li>
 		<li class="cbody"></li>
 	</ul>		
 </div>
+
+<!-- Drop Down Box for Additional Information -->
 <div class="drop-down">
 	<b>Click on the icons above to get more information</b>
 	<div class="" ng-show="why">hiiii</div>
 	<div class="" ng-hide="why">no</div>
-	<div class="">no</div>
-	<div class="">no</div>		
+	<div class="">{{dollars}}</div>
+	
+	<div ng-repeat="user in users" ng-show="showuserid">
+		<p>{{user.id}}</p>
+		<hr>
+	</div>
+
+	<div ng-controller="Controller">
+	  	<my-customer info="naomi"></my-customer>
+	 	<hr>
+	  	<my-customer info="igor"></my-customer>
+	</div>
+			
 </div>
+

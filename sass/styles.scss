@@ -3,6 +3,9 @@
 @import "mixins";
 @import "overide";
 
+html{
+	min-width: 460px
+}
 
 header {
 
@@ -39,15 +42,16 @@ table thead {
 }
 
 table tbody td{
-	padding:10px;
 	font-size: 15px;
 	font-weight: 700;
-	padding: 10px !important; 
+	border: 1px solid white;
+	padding: 20px !important; 
 	zoom: 1;
 	transform: scale(1);
     transition: zoom 1.5s ease; 
-    z-index: -1;
-	position:relative;
+    height: 100%;
+/*    z-index: -1;
+*/	position:relative;
 
 	@include respond-to(wide-screens){
 	 	&:hover {
@@ -55,7 +59,8 @@ table tbody td{
       	zoom: 1.1;
       	transform: scale(1.1);
       	z-index: 20;
-      	position: relative
+      	position: relative;
+      	height: 100%
    		}
    	}
 }
@@ -131,6 +136,7 @@ table tbody td{
       	padding: 5px; 
 		margin:10px 33px 35px 33px;
 		display: inline-block;
+		cursor: pointer;
 
 		thead & {
 			cursor: pointer;
@@ -178,7 +184,8 @@ table tbody td{
 	display: none;
 	width: inherit;
 	padding:5px;
-	font-size: 12px
+	font-size: 12px;
+	overflow: auto !important;
 	
 }
 
@@ -188,8 +195,13 @@ table tbody td{
 	top: 0px; 
 	left: 0;
 	width: 350px;
+    overflow-y: scroll !important;
 
 	@include respond-to(handhelds){
+		width: 100%;
+	}
+
+	@include respond-to(medium-screens){
 		width: 100%;
 	}
 
@@ -198,6 +210,8 @@ table tbody td{
 		display:inline;
 	}
 
+	.icons ul {margin-bottom:0 !important;}
+
 }
 
 .icons{    
@@ -205,6 +219,51 @@ table tbody td{
     background: rgba(255,255,255, 0.9);
 }
 
+
+
+.mobile-buttons {
+	cursor:pointer;
+	float:left; 
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	left: 20px;
+	position:absolute;
+	a span{
+	  display:inline-block;
+	
+	  width: 17px; 
+	  background-color:grey; 
+	  height:2px; 
+	  position:absolute;
+	  margin: 1px auto 0 auto;
+	  /*left: 5px*/
+	  text-align: center
+  	}	
+ 
+}
+
+.next{
+  span:nth-of-type(1){
+  
+    top:15px;
+  }
+  span:nth-of-type(2){/*{-ms-transform: rotate(40deg); 
+    -webkit-transform: rotate(-40deg); */
+   /* transform: rotate(-40deg);*/
+    top:20px;
+  }
+  span:nth-of-type(3){/*-ms-transform: rotate(40deg); 
+    -webkit-transform: rotate(-40deg); */
+   /* transform: rotate(-40deg);*/
+    top:25px;
+  }
+
+}
+
+
+
 .open {
-	display: block
+	display: block;
+	font-size: 11px
 }
