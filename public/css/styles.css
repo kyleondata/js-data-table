@@ -28,12 +28,19 @@ header {
     color: white;
     text-transform: uppercase;
     font-weight: 300; }
+    @media only screen and (max-width: 450px) {
+      header h1 {
+        font-size: 20px;
+        font-weight: 400; } }
   header p {
     color: grey;
     font-weight: 500;
     margin-top: 20px;
     font-size: 120%;
     letter-spacing: 0.1em; }
+    @media only screen and (max-width: 450px) {
+      header p {
+        font-size: 13px; } }
 
 table thead td {
   padding: 20px;

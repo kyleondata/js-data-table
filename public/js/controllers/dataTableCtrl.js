@@ -23,6 +23,7 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
 
 
 
+
 // Testing
 // var root = 'http://jsonplaceholder.typicode.com/posts';
 // $.ajax({
