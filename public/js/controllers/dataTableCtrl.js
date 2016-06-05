@@ -1,7 +1,7 @@
 
 /* Controller retreives sorts json data */
 
-app.controller('dataCtrl', function ($scope, $http, $window) {
+angular.module('myapp').controller('dataCtrl', function ($scope, $http, $window) {
 
   $http.get("http://jsonplaceholder.typicode.com/posts")
   .success(function (response) {
@@ -17,7 +17,7 @@ app.controller('dataCtrl', function ($scope, $http, $window) {
 
 });
 
-app.directive("myPanel", function() {
+angular.module('myapp').directive("myPanel", function() {
   return {
     transclude: true,
       scope: {
