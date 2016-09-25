@@ -2,6 +2,8 @@
 
 http://quiet-earth-48469.herokuapp.com/
 
+![ScreenShot](https://github.com/arc6789/js-data-table/blob/master/ScreenShot.png)
+
 This project contains data table that can be sorted in ascending and descending order by each category.
 
 
