@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 // port for dev environment ================================
-var port = process.env.PORT || 8081; 
+var port = process.env.PORT || 8080; 
 
 // set the static files location ===========================
 app.use(express.static(__dirname + '/public'));
