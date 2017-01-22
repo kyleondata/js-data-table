@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var chimp = require('gulp-chimp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
@@ -54,6 +55,12 @@ gulp.task('min-css', function () {
   return gulp.src('public/css/*.css')
     .pipe(minifyCss({ compatibility: 'ie8' }))
     .pipe(gulp.dest('public/css/min-css/'));
+});
+
+/* For Automated UI Testing using Chimp */
+
+gulp.task('chimp', function () {
+    return chimp('./tests/test.conf.js');
 });
 
 

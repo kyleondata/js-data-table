@@ -38,10 +38,13 @@
     "gulp-webserver": "^0.9.1",
     "json-server": "^0.8.10",
     "method-override": "^2.3.5",
-    "protractor": "^3.3.0"
+    "protractor": "^3.3.0",
+    "selenium-webdriver": "^2.44.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "webdriver-start": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
+    "test": "../node_modules/.bin/protractor ./test.conf.js"
   },
   "main": "server.js",
   "author": "Anusuya Choudhury",
