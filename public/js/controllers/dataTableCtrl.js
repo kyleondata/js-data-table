@@ -2,7 +2,7 @@
 
 app.controller('dataCtrl', function ($scope, $http, $window) {
 
-  $http.get('http://jsonplaceholder.typicode.com/posts')
+  $http.get('https://jsonplaceholder.typicode.com/posts')
     .success(function (response) {
       $scope.users = response;
     })
